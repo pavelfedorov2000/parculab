@@ -1,0 +1,152 @@
+.footer {
+
+    min-height: 7.9rem;
+    background-color: #181818;
+    @extend %vertical-align;
+
+    @media(max-width: 1024px) {
+        padding: 3rem 0;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-areas: 'phone soc coockies personal copy';
+        align-items: center;
+        justify-content: space-between;
+        background-color: #181818;
+        color: #fff;
+
+        @media(min-width: 1025px) {}
+
+        @media(max-width: 1024px) {
+            //grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                'phone . soc'
+                'coockies personal copy'
+            ;
+            row-gap: 2rem;
+        }
+
+        @media(max-width: 767px) {
+            grid-template-areas:
+                'phone soc'
+                'coockies personal'
+                'copy copy'
+            ;
+        }
+
+        @media(max-width: 500px) {
+            grid-template-areas:
+                'phone soc'
+                'coockies coockies'
+                'personal personal'
+                'copy copy'
+            ;
+        }
+    }
+
+    // .footer__phone
+
+    &__phone {
+        grid-area: phone;
+        @extend %text-18;
+        font-weight: 600;
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    // .footer__social
+
+    &__social {
+        grid-area: soc;
+        justify-content: flex-end;
+    }
+
+    // .footer__social-item
+
+    &__social-item {
+        svg path {
+            fill: #fff;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    path {
+                        fill: $accent;
+                    }
+                }
+            }
+        }
+    }
+
+    &__coockies {
+        max-width: 16.5rem;
+        grid-area: coockies;
+        @extend %text-12;
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    // .footer__politics
+
+    &__personal {
+        grid-area: personal;
+        max-width: 19.6rem;
+        @extend %text-12;
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    // .footer__copy
+
+    &__copy {
+        grid-area: copy;
+        @extend %text-12;
+        font-weight: 600;
+    }
+}
+
+.social {
+
+    display: flex;
+    // .social__item
+
+    &__item {
+        width: 2.759rem;
+        height: 2.759rem;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: 1.261rem;
+        }
+
+        svg {
+            path {
+                transition: .3s fill;
+            }
+        }
+    }
+
+    // .social__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+    }
+}

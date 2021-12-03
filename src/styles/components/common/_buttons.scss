@@ -1,0 +1,115 @@
+.btn {
+    //background-color: $accent;
+    text-align: center;
+
+    @media (any-hover: hover) {
+        &:hover {}
+    }
+}
+
+.arrow-btn {
+    font-family: 'Roboto', sans-serif;
+}
+
+.load-btn {
+    @extend %vertical-align;
+    @extend %text-14;
+    text-transform: uppercase;
+    transition: .3s all;
+    margin: 0 auto;
+
+    img {
+        width: 6rem;
+        height: 6rem;
+        flex-shrink: 0;
+        margin-right: 2.1rem;
+        transition: .3s transform;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accent;
+
+            img {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    /* &.hidden {
+        display: none;
+    } */
+}
+
+.round-arr-btn {
+    position: relative;
+    display: block;
+    width: 4.9rem;
+    height: 4.9rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 0.1rem dotted #B0B0B0;
+    transition: .3s all;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: .3s all;
+    }
+
+    &:before {
+        left: 0.3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: $accent;
+        //background-image: url(../img/icons/round.svg);
+    }
+
+    &:after {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.2rem;
+        height: 0.8rem;
+        background-image: url(../img/icons/black-arr.svg);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:before {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: none;
+            }
+
+            &:after {
+                transform: translate(1rem, -50%);
+            }
+        }
+    }
+}
+
+.all-nav {
+    @extend %vertical-align;
+    padding-top: 0.562rem;
+    border-top: 0.2rem solid $accent;
+    @extend %text-18;
+    font-weight: 500;
+    color: $accent;
+
+    @media(min-width: 1025px) {
+        width: 63.2rem;
+    }
+
+    &__btn {
+        margin-left: 1.5rem;
+    }
+}

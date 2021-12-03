@@ -1,0 +1,99 @@
+.projects {
+    padding-bottom: 8rem;
+    &__grid {
+        display: grid;
+        grid-gap: 1.3rem;
+        margin: 3rem 0 5.8rem;
+    }
+}
+
+.project-card {
+
+    position: relative;
+    display: grid;
+    grid-gap: 3rem;
+    padding: 3.7rem 2.1rem 5.2rem 10rem;
+    @media(min-width: 1025px) {
+        grid-template-columns: auto 23.4rem;
+    }
+    @extend %gray-box;
+    @media(max-width: 767px) {
+        padding: 3rem;
+    }
+
+    &.hidden {
+        display: none;
+    }
+    // .project-card__title
+
+    &__title {
+        position: relative;
+        cursor: pointer;
+        @extend %text-24;
+        font-weight: 700;
+        @extend %arrow;
+        @media(min-width: 1025px) {
+            padding-bottom: 3rem;
+            transition: .3s color;
+            z-index: 25;
+            padding-right: 0;
+        }
+        @media(min-width: 768px) {
+            padding-right: 8rem;
+        }
+        @media(max-width: 767px) {
+            padding-bottom: 3rem;
+        }
+        &:before {
+            @media(min-width: 768px) {
+                content: '';
+                position: absolute;
+                top: 0.7rem;
+                left: -6.1rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                border-radius: 50%;
+                background-color: $accent;
+            }
+        }
+        &:after {
+            @media(max-width: 1024px) {
+                right: 0;
+                top: 0.3rem;
+                bottom: unset;
+                left: unset;
+            }
+            @media(max-width: 767px) {
+                right: unset;
+                top: unset;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+                &:after {
+                    transform: translateX(1rem);
+                }
+            }
+        }
+    }
+
+    // .project-card__info
+
+    &__info {
+        @extend %text-14;
+        font-weight: 600;
+        >div {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        dt {
+            color: $accent;
+            float: left;
+            padding-right: 0.3rem;
+        }
+    }
+}

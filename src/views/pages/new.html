@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Новое"
+})
+
+<body>
+
+    <div class="wrapper" data-page="new">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <main class="page new">
+            <div class="container">
+                <h1 class="page-title new__title">Новое</h1>
+                <div class="new__filter">
+                    <button class="new__filter-btn new__filter-btn--active" data-articles-filter="all" type="button">Все
+                        новое</button>
+                    <button class="new__filter-btn" data-articles-filter="news" type="button">Новости</button>
+                    <button class="new__filter-btn" data-articles-filter="analitics" type="button">Аналитика</button>
+                    <button class="new__filter-btn" data-articles-filter="events" type="button">Мероприятия</button>
+                </div>
+                <div class="new__grid">
+                    <article class="new-card" data-article-category="analitics">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Аналитика</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            Сколько времени займет суд?
+                        </h6>
+                        <div class="new-card__link">Подробнее</div>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2020-01-01">01.01.2020</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Доктрина venire contra factum proprium (запрет противоречивого поведения)
+                                в судебной практике
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2019-12-01">01.12.2019</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Верховный Суд ломает практику по делам
+                                о корректировке таможенной стоимости?
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="events">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Мероприятия</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate turpis duis non
+                                amet.
+                                Luctus ipsum sed enim in
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="events">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Мероприятия</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate turpis duis non
+                                amet.
+                                Luctus ipsum sed enim in
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2019-12-01">01.12.2019</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Верховный Суд ломает практику по делам
+                                о корректировке таможенной стоимости?
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="analitics">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Аналитика</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            Сколько времени займет суд?
+                        </h6>
+                        <div class="new-card__link">Подробнее</div>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2020-01-01">01.01.2020</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Доктрина venire contra factum proprium (запрет противоречивого поведения)
+                                в судебной практике
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2019-12-01">01.12.2019</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Верховный Суд ломает практику по делам
+                                о корректировке таможенной стоимости?
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="events">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Мероприятия</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate turpis duis non
+                                amet.
+                                Luctus ipsum sed enim in
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="events">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Мероприятия</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate turpis duis non
+                                amet.
+                                Luctus ipsum sed enim in
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2019-12-01">01.12.2019</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Верховный Суд ломает практику по делам
+                                о корректировке таможенной стоимости?
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card hidden" data-article-category="analitics">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Аналитика</div>
+                            <time class="new-card__date" datetime="2021-06-01">01.06.2021</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            Сколько времени займет суд?
+                        </h6>
+                        <div class="new-card__link">Подробнее</div>
+                    </article>
+                    <article class="new-card hidden" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2020-01-01">01.01.2020</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Доктрина venire contra factum proprium (запрет противоречивого поведения)
+                                в судебной практике
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                    <article class="new-card hidden" data-article-category="news">
+                        <a href="#" class="full-link"></a>
+                        <header class="new-card__top">
+                            <div class="new-card__category">Новости</div>
+                            <time class="new-card__date" datetime="2019-12-01">01.12.2019</time>
+                        </header>
+                        <h6 class="new-card__title">
+                            <a href="#">
+                                Верховный Суд ломает практику по делам
+                                о корректировке таможенной стоимости?
+                            </a>
+                        </h6>
+                        <a href="#" class="new-card__link">Подробнее</a>
+                    </article>
+                </div>
+
+                <button class="load-btn new__more-btn" type="button">
+                    <img src="img/icons/load.svg" alt="" width="60" height="60">
+                    Показать еще
+                </button>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        <!-- @@include('../../blocks/modules/popups/_popups.html') -->
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

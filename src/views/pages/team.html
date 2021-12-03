@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Команда"
+})
+
+<body>
+
+    <div class="wrapper" data-page="team">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <main class="page team">
+            <div class="container">
+                <h1 class="page-title team__title">Команда</h1>
+                <div class="team__grid">
+                    @@include('../../blocks/modules/team/_team-member.html')
+                    @@include('../../blocks/modules/team/_team-member.html')
+                    @@include('../../blocks/modules/team/_team-member.html')
+                    @@include('../../blocks/modules/team/_team-member.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        <!-- @@include('../../blocks/modules/popups/_popups.html') -->
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

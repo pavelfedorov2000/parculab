@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Ключевые проекты"
+})
+
+<body>
+
+    <div class="wrapper" data-page="projects">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <main class="page projects">
+            <div class="container">
+                <h1 class="page-title">Ключевые проекты</h1>
+                <div class="projects__grid">
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                    @@include('../../blocks/modules/projects/_project-card.html')
+                </div>
+
+                <button class="load-btn projects__more-btn" type="button">
+                    <img src="img/icons/load.svg" alt="" width="60" height="60">
+                    Показать еще
+                </button>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        <!-- @@include('../../blocks/modules/popups/_popups.html') -->
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

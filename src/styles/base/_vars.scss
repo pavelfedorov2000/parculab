@@ -1,0 +1,148 @@
+// colors
+$accent: #29B8CE;
+//$dark: ;
+//$red: ;
+//$blue: ;
+//$dark-blue: ;
+//$yellow: ;
+//$orange: ;
+//$light: ;
+//$border-color: ;
+//$border: 1px solid $border-color;
+
+// fonts
+//$second-font: , sans-serif;
+
+$container: 111rem;
+$gap: 1.5rem;
+
+// Typography
+%text-12 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+%text-14 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+%text-16 {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+%text-18 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @media(max-width: 500px) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+%text-24 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+
+    @media(max-width: 767px) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}
+
+%text-36 {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+}
+
+%vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+%flex-center {
+    @extend %vertical-align;
+    justify-content: center;
+}
+
+%flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-row-center {
+    @extend %flex-row;
+    align-items: center;
+}
+
+%flex-row-end {
+    @extend %flex-row;
+    align-items: flex-end;
+}
+
+%flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-col-center {
+    @extend %flex-col;
+    align-items: center;
+}
+
+%flex-col-end {
+    @extend %flex-col;
+    align-items: flex-end;
+}
+
+%pos-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%pos-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%pos-center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%arrow {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 7.1rem;
+        height: 1.6rem;
+        background-image: url(../img/icons/arrow.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: .3s transform;
+    }
+}
+
+%radius {
+    border-radius: 0.2rem;
+}
+
+%gray-box {
+    @extend %radius;
+    background-color: #f2f2f2;
+}
+
+%cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

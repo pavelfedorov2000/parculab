@@ -1,0 +1,157 @@
+.header {
+
+    @media(min-width: 1025px) {
+        height: 10.8rem;
+    }
+
+    background-color: #181818;
+    color: #fff;
+
+    @media(max-width: 1024px) {
+        padding: 1.5rem 0;
+    }
+
+    &__inner {
+        @extend %flex-row-center;
+
+        @media(min-width: 1025px) {
+            //margin-top: -1.8rem;
+        }
+    }
+
+    &__logo {
+        width: 27rem;
+        height: 10rem;
+
+        @media(max-width: 1024px) {
+            width: 20rem;
+            height: 6rem;
+        }
+    }
+
+    &__logo-img {
+        object-fit: contain;
+    }
+
+    // .header__menu
+
+    &__menu {
+        @media(max-width: 1024px) {
+            display: none;
+            flex-grow: 1;
+        }
+
+        @media(min-width: 1025px) {
+            margin-left: auto;
+            margin-right: 8rem;
+        }
+    }
+
+    &__menu-list {
+        @media(min-width: 1025px) {
+            display: flex;
+        }
+
+        @media(max-width: 1024px) {
+            columns: 2;
+        }
+
+        @media(max-width: 500px) {
+            columns: unset;
+        }
+    }
+
+    // .header__menu-item
+
+    &__menu-item {
+        &:not(:last-child) {
+            @media(min-width: 1025px) {
+                margin-right: 4.5rem;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    // .header__menu-link
+
+    &__menu-link {
+        position: relative;
+        padding-bottom: 0.6rem;
+        @extend %text-14;
+        font-weight: 600;
+        transition: .3s color;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 0.1rem;
+            background-color: $accent;
+            transition: .3s width;
+        }
+
+        @media(max-width: 1024px) {
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+
+                &:after {
+                    width: 3.4rem;
+                }
+            }
+        }
+
+        &--active {
+            color: $accent;
+
+            &:after {
+                width: 3.4rem;
+            }
+        }
+    }
+
+    &__langs {
+        display: flex;
+
+        @media(max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__lang {
+        @extend %text-14;
+        font-weight: 500;
+        transition: .3s all;
+        opacity: .5;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+                opacity: 1;
+            }
+        }
+
+        &--active {
+            color: $accent;
+            opacity: 1;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.7rem;
+        }
+    }
+}
